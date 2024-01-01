@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useFormik } from 'formik';
 import { loginContext } from '../context/LoginContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const validate = values => {
@@ -52,6 +53,7 @@ export default function Signup() {
 
 
   const { signup } = useContext(loginContext);
+  const navigate = useNavigate();
 
 
 
@@ -77,13 +79,15 @@ export default function Signup() {
       setTimeout(() => {
         
         formik.resetForm();
+        navigate('/');
       }, 1000);
     }
   });
 
   return (
-    <div className="text-gray-800">
-      <h1 className="font-bold text-2xl mb-4">Signup Page</h1>
+    // <div className="">
+    <div className="mx-auto max-w-md  bg-gray-200 text-gray-800 rounded-md shadow-md mt-4">
+      <h1 className="font-bold text-2xl pl-6 pt-6">Register User</h1>
 
       <div className="max-w-md mx-auto bg-gray-200 p-6 rounded-md">
         <form onSubmit={formik.handleSubmit}>
@@ -143,7 +147,7 @@ export default function Signup() {
           <div className="mb-4">
             <label htmlFor="password">Password</label>
             <input
-              type="text"
+              type="password"
               id="password"
               className="w-full p-2 border rounded"
               value={formik.values.password}
@@ -156,7 +160,7 @@ export default function Signup() {
           <div className="mb-4">
             <label htmlFor="cnfpass">Confirm Password</label>
             <input
-              type="text"
+              type="password"
               id="cnfpass"
               className="w-full p-2 border rounded"
               value={formik.values.cnfpass}

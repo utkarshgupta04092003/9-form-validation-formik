@@ -7,20 +7,22 @@ export default function LoginContext({ children }) {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [users, setUsers] = useState([]);
-    const [currentUser, setCurrentUser] = useState({
-        id: 1,
-        firstname: 'Dummy first Name',
-        lastname: 'dummy last name',
-        email: 'dummy@xyz.com',
-        contact: 9999999999,
-        password: 'abcdefg',
-    });
+    const [currentUser, setCurrentUser] = useState(null);
 
     const login = (user) => {
         // validation for existing user details
-        console.log('from login function',user)
-        setCurrentUser(user);
-        setIsLoggedIn(true);
+        console.log('from login function',user);
+        for(let i=0;i<users.length;i++){
+            if(users[i].email === user.email && users[i].password === user.password){
+                setCurrentUser(users[i]);
+                setIsLoggedIn(true);
+                alert('Logged in successfully.');
+                return;
+            }
+        }
+
+        alert('Invalid email/password');
+
     }
     const logout = () => {
         setCurrentUser(null);

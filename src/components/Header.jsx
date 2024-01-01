@@ -6,7 +6,7 @@ import {loginContext} from '../context/LoginContext';
 const Header = () => {
 
 
-  const {isLoggedIn} = useContext(loginContext);
+  const {isLoggedIn, logout} = useContext(loginContext);
 
 
   return (
@@ -18,20 +18,23 @@ const Header = () => {
           <li>
             <Link to='/' className="hover:text-gray-300">Home</Link>
           </li>
+
+          <li>
+            <Link to='/signup' className="hover:text-gray-300">Register</Link>
+          </li>
           {isLoggedIn? 
           <li>
-            <Link to='logout' className="hover:text-gray-300">Logout</Link>
+            <button onClick={logout}>Logout</button>
+            {/* <Link to='/logout' className="hover:text-gray-300">Logout</Link> */}
+
           </li>
           :
 
           <li>
-            <Link to='login' className="hover:text-gray-300">Login</Link>
+            <Link to='/login' className="hover:text-gray-300">Login</Link>
           </li>
           
         }
-          <li>
-            <Link to='/signup' className="hover:text-gray-300">Register</Link>
-          </li>
 
         </ul>
       </div>

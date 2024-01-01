@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { loginContext } from '../context/LoginContext';
+import UserProfile from './UserProfile';
 
 export default function Home() {
 
@@ -11,20 +12,18 @@ export default function Home() {
     return (
         <div>
 
-
-
-            <button onClick={login}>Login</button>
-            <button onClick={logout}>Logout</button>
-
             <ul>
 
-            {users.map((user,index)=>(
+            {/* {users.map((user,index)=>(
                 <li key={index}> {user.firstname+'-'+user.lastname}</li>
-                ))}
-            <h1 className='font-bold text-2xl'>Home Page</h1>
+                ))} */}
             </ul>
+            <h1 className='font-bold text-2xl '>Dashboard</h1>
             
-            <div className="font-bold">current user : {currentUser?.firstname}</div>
+            <div className="font-bold">current user :  <p>{currentUser ? (<UserProfile/>) :'No Logged In user'}</p></div>
+
+
+            
         
         </div>
     )
