@@ -5,11 +5,12 @@
 
 1. [Overview](#overview)
 2. [Features](#features)
-3. [How to Use](#how-to-use)
-4. [Project Structure](#project-structure)
-5. [Technologies Used](#technologies-used)
-6. [Contributions](#contributions)
-7. [License](#license)
+3. [Screenshots](#screenshots)
+4. [How to Use](#how-to-use)
+5. [Project Structure](#project-structure)
+6. [Technologies Used](#technologies-used)
+7. [Contributions](#contributions)
+8. [License](#license)
 
 ## Overview
 
@@ -32,6 +33,25 @@ The React Formik Auth App is a web application developed with React, vite and fo
 - **Error Page:** Display error page for any invalid URL.
 
 
+## Screenshots
+
+Home Page without login
+![image](https://github.com/utkarshgupta04092003/9-form-validation-formik/assets/63789702/94da3563-a43c-413c-931a-8536946d206a)
+
+Form validation
+![image](https://github.com/utkarshgupta04092003/9-form-validation-formik/assets/63789702/69080cd8-c92f-4528-8a9d-da3eb2288cca)
+
+Form validation
+![image](https://github.com/utkarshgupta04092003/9-form-validation-formik/assets/63789702/7a1fa80e-4d3f-4d3a-a225-92f246e7ec0c)
+
+Registration successfully
+![image](https://github.com/utkarshgupta04092003/9-form-validation-formik/assets/63789702/01fc13d8-4fb0-452c-b949-d1446ec836e9)
+
+Login successfully
+![image](https://github.com/utkarshgupta04092003/9-form-validation-formik/assets/63789702/1b2db031-45ee-4deb-b164-eebfa4eca41b)
+
+Home Page after login
+![image](https://github.com/utkarshgupta04092003/9-form-validation-formik/assets/63789702/164c3cd1-60fa-4e04-8ba6-204610863ceb)
 
 ## How to Use
 
