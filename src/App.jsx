@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './components/Home';
 import Login from './components/Login';
-import Logout from './components/Logout';
 import Signup from './components/Signup';
 import Error from './components/Error';
 import Header from './components/Header';
@@ -27,7 +26,6 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/logout' element={<Logout />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='*' element={<Error />} />
 
